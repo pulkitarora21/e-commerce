@@ -1,0 +1,47 @@
+= E-Commerce System
+This application implements an innovative E-Commerce Platform for a Buyer-Seller System.
+
+=== Group Member
+* Harsh Manocha - 2012134
+* Pranav Jain - 2011075
+* Pulkit Arora - 2012082
+* Talha Ahmad Siddiqui - 2012111
+=== Installation Details
+Install Rails version 4.0.0 and Ruby version 2.1.4 using any authentic documentations available on the net.
+Clone the repository or download the zip.
+Extract the zip and cd to that folder.
+Run the following commands to run the application-:
+    bundle install
+    rake db:migrate
+    rake db:seed
+    rails server
+Enter URL http://localhost:3000 to visit the home page of the application.
+
+=== Outline of the Project
+Our application includes 4 design patterns namely Model-View-Controller, Adapter Pattern, Singleton and Factory Pattern.
+
+The application is divided into two main sections:
+
+* The buyer's side of the application manages the catalog, cart, 
+  and checkout. There are four models and their respective controllers and views which handle
+  Cart, LineItem, Order, and Product. There is also a SessionsController to manage sessions implemented via a Login system.
+
+* This section is accessible only to the sellers. This is implemented by the SessionsController,
+  and is enforced by the ApplicationController #authorize method. This side of the application
+  handles product maintenance and order fulfillment.
+
+The buyer can view many products and their details on the catalog page. S/he can then select respective items and add them to the cart.
+Once the buyer is done selecting, s/he can checkout and proceed for payment. The order system then places the order for that
+buyer to the respective sellers. A notification mail is sent to the buyer notifying her/him about the order summary.
+The buyer also has an option of emptying the cart at any point of time.
+
+Sellers can add a new product and it's details. They can also update or delete any product's information.
+Sellers can also view the respective orders in their account. They have an option to delete and edit the order.
+
+=== Technical Challenges
+* Since a few of our team members were working on Ruby on Rails for the first time, we had a difficulty in
+  setting up the framework which would be consistent for the team.
+
+* Challenges in transitioning from the design phase to the implementation phase.
+
+* Envisioning the tests before developing the code..
